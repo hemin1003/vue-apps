@@ -1,0 +1,591 @@
+/*字体图标 http://www.iconfont.cn/*/
+@font-face {
+  font-family: 'iconfont';  /* project id 189309 */
+  src: url('//at.alicdn.com/t/font_gs5dc3ye1qhncdi.eot');
+  src: url('//at.alicdn.com/t/font_gs5dc3ye1qhncdi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_gs5dc3ye1qhncdi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_gs5dc3ye1qhncdi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_gs5dc3ye1qhncdi.svg#iconfont') format('svg');
+}
+.iconfont {
+  font: normal 22px/1 'iconfont';
+  vertical-align: 0;
+}
+/*reset*/
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #ebebeb;
+  color: #333;
+}
+html {
+  font-size: 20px;
+}
+body {
+  font-size: 16px;
+}
+@media screen and (max-width: 319px) {
+  html {
+    font-size: 17.0667px; 
+  } 
+}
+@media screen and (min-width: 320px) and (max-width: 359px) {
+  html {
+    font-size: 17.0667px; 
+  } 
+}
+@media screen and (min-width: 360px) and (max-width: 374px) {
+  html {
+    font-size: 19.2px; 
+  } 
+}
+h3,h4{font-weight: 500;}
+a {
+  color: #4083c7;
+}
+img{
+  max-width: 100%;
+  vertical-align: top;
+}
+img.l-center{
+  display: block;
+  margin:auto;
+}
+.l-center{
+  text-align: center;
+}
+
+table{
+  width: 100%;
+  border:1px solid #ebebeb;
+  border-collapse: collapse;
+  border-spacing:0;
+}
+th, td{
+  font-weight: 400;
+  border:1px solid #ebebeb;
+  padding: 0.125rem 0.25rem;
+  text-align: center;
+}
+th{
+  background-color: #eee;
+}
+td.l-tr{
+  text-align: right;
+}
+.l-table-th td{text-align: left; background-color: #4083c7; color: #fff;}
+.l-table-th td strong{font-weight: 500;}
+.l-table-line td{padding: 0;border-bottom: 1px solid #ccc;}
+ins{
+  visibility: hidden;
+  width: 2em;
+  display: inline-block;
+}
+ins.ins2-1{
+  width: 1em;
+}
+ins.ins4-1{
+  width: 0.5em;
+}
+/*
+  http://www.css88.com/book/css/ 
+  弹性布局===================
+  .l-flex-h  横向布局不换行，子项将会同等高度
+  .l-flex-hc 横向布局不换行，子项将垂直居中
+  .vux-center .vux-center-h .vux-center-v
+*/
+.l-flex-h,
+.l-flex-hc,
+.l-flex-hvc,
+.l-flex-v,
+.l-flex-vc,
+.l-flex-vhc,
+.l-flex-wrap {
+  /*应用于父元素 */
+  display: flex;
+}
+/*
+  flex-flow: <' flex-direction '> || <' flex-wrap '>
+  flex-direction: row | row-reverse | column | column-reverse
+  flex-wrap: nowrap | wrap | wrap-reverse
+*/
+.l-flex-h,
+.l-flex-hc,
+.l-flex-hvc {
+  /*横向布局*/
+  flex-flow: row nowrap;
+}
+.l-flex-v,
+.l-flex-vc,
+.l-flex-vhc {
+  /*纵向布局*/
+  flex-flow: column nowrap;
+}
+/*
+  justify-content: flex-start | flex-end | center | space-between | space-around 用于不换行的弹性盒模型容器
+  align-items: flex-start | flex-end | center | baseline | stretch 用于不换行的弹性盒模型容器
+*/
+.l-flex-h {
+  /*同等高度*/
+  align-items: strecth;
+}
+.l-flex-hc,
+.l-flex-hvc {
+  /*水平排列的垂直居中*/
+  align-items: center;
+}
+.l-flex-hvc {
+  /*水平排列的水平居中*/
+  justify-content: center;
+}
+
+.l-flex-vc,
+.l-flex-vhc{
+  /*垂直排列的垂直居中*/
+  justify-content: center;
+}
+.l-flex-vhc {
+  /*垂直排列的水平居中*/
+  align-items: center;
+}
+
+/*
+  用于换行的弹性盒模型容器
+  align-content: flex-start | flex-end | center | space-between | space-around | stretch 
+*/
+.l-flex-wrap {
+  /*水平排列换行布局*/
+  flex-flow: row wrap;
+  /*align-content: flex-start;*/
+  /*justify-content: space-between;*/
+}
+
+/*
+  设置子项
+  flex: none | <' flex-grow '> <' flex-shrink >'? || <' flex-basis '>
+  flex-grow: <number> 剩余空间扩展比例
+  flex-shrink: <number>  不足空间收缩比例
+  flex-basis: <length> | <percentage> | auto | content   // 基准值
+  align-self: auto | flex-start | flex-end | center | baseline | stretch
+*/
+[class*='l-flex-'] > .l-rest {
+  /*如果只有设置其中一个子项，其将霸占剩余部分*/
+  flex: 1;
+}
+
+/*弹性布局===================end*/
+.l-fill-color {
+  white-space: nowrap;
+  background: linear-gradient(to top, #eee, #aaa 50%, #333 51%, #000);
+  background-clip: text;
+  -webkit-fill-color: transparent;
+}
+.l-reflect{
+  white-space: nowrap;
+  -webkit-box-reflect:below 0 linear-gradient(transparent,transparent 50%,rgba(255,255,255,.3));
+}
+.l-text-wrap {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.l-text-clamp2 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: 2.4em;
+  line-height: 1.2;
+  word-break: break-all;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.l-text-right{
+  text-align: right;
+}
+.l-loading{
+  box-sizing: border-box;
+  background: url('~assets/imgs/loading.gif') no-repeat 50% 50%;
+  padding: 0.533333rem 0;
+  background-size: 15px;
+  opacity: 0.6;
+}
+.l-spin{animation: spin 3s 0s infinite linear;}
+@keyframes spin{
+  0% {transform:rotate(0deg);}
+  100% {transform:rotate(360deg);}
+}
+/*wechat*/
+.l-chat-send{
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  input{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    font-size: 14px;
+  }
+  button{
+    padding: 3px 15px !important;
+  }
+  .l-btn{
+    margin-left: 10px;
+  }
+}
+.l-chat-list{padding: 0 0.266667rem;}
+[class*='l-chat-item']{
+  margin: 0.75rem 0;
+  .l-chat-name{
+    color: #999;
+    font-size: 12px;
+    margin: 0 15px;
+  }
+  .l-thumb{
+    width: 2.0rem;
+    height: 2.0rem;
+    border: 1px solid #e4e4e4;
+    background-color: #fff;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .l-chat-msg{
+    display: inline-block;
+    border:1px solid #6fb44d;
+    border-radius: 3px;
+    padding: 0.375rem;
+    position: relative;
+    font-size: 14px;
+    background-color: #a0e75a;
+    color: #0f1608;
+    margin-left: 15px;
+    max-width: 80%;
+    text-align: left;
+    word-break: break-all;
+  }
+  .l-chat-msg:before, .l-chat-msg:after{
+    position: absolute;
+    content: '';
+    border-style: solid;
+    border-color: transparent;
+  }
+  .l-chat-msg:before{
+    left: -20px;
+    top: 9px;
+    border-width: 10px;
+    border-right-color: #6fb44d;
+  }
+  .l-chat-msg:after{
+    left: -18px;
+    top: 10px;
+    border-width: 9px;
+    border-right-color: #a0e75a;
+  }
+}
+.l-chat-item-other{
+  .l-chat-msg{
+    max-width: 65%;
+    border-color: #ccc;
+    background-color: #fff;
+  }
+  .l-chat-msg:before{
+    border-right-color: #ccc;
+  }
+  .l-chat-msg:after{
+    border-right-color: #fff;
+  }
+}
+.l-chat-item-me{
+  text-align: right;
+  flex-direction: row-reverse;
+  .l-chat-msg{
+    max-width: 65%;
+    margin-right: 15px;
+    margin-left: auto;
+  }
+  .l-chat-msg:before{
+    left: auto;
+    right: -20px;
+    border-right-color: transparent;
+    border-left-color: #6fb44d;
+  }
+  .l-chat-msg:after{
+    left: auto;
+    right: -18px;
+    border-right-color: transparent;
+    border-left-color: #a0e75a;
+  }
+}
+
+.l-title-hd{
+  background-color: #fff;
+  padding: 0.375rem 0.75rem;
+  h3{
+    font-weight: 400;
+    font-size: 17px;
+  }
+  a{
+    color: #aaa;
+    i{
+      vertical-align: middle;
+    }
+  }
+}
+.l-scrolling{
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.l-border-t, 
+.l-border-b{
+  position: relative;
+}
+.l-border-t:before, 
+.l-border-b:after{
+  content: " ";
+  width: 200%;
+  position: absolute;
+  border: 1px solid #E5E5E5;
+  color: #E5E5E5;
+  height: 1px;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  box-sizing: border-box;
+}
+.l-border-t:before{
+  top: 0;
+  left: 0;
+}
+.l-border-b:after{
+  bottom: -1px;
+  left: 0;
+}
+.l-fsize-sm {font-size: 12px !important;}
+.l-fsize-s {font-size: 14px !important;}
+.l-fsize {font-size: 17px !important;}
+.l-fsize-l {font-size: 20px !important;}
+.l-fgray {color: #999;}
+.l-fl{float: left;}
+.l-fr{float: right;}
+
+.l-padding{padding: 0.75rem;}
+.l-margin{margin: 0.75rem;}
+.l-margin-tb{margin-top: 0.75rem; margin-bottom: 0.75rem; }
+.l-margin-t{margin-top: 0.75rem; }
+.l-margin-b{margin-bottom: 0.75rem; }
+
+.l-btn-square{
+  border-radius: 0 !important;
+}
+.l-btn-square:after{
+  visibility: hidden;
+}
+.l-btn-area {
+  margin: 0.8rem 0.75rem;
+  text-align: center;
+}
+.icon-arrow {
+  color: #C8C8CD;
+  font-size: 18px;
+}
+.l-list-box{ 
+  overflow: hidden;
+}
+/*滚动条上拉下拉*/
+.l-pulldown{
+  position: absolute; 
+  width: 100%; 
+  height: 3.0rem; 
+  line-height: 3.0rem; 
+  top: -3.0rem; 
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+}
+.l-pullup{
+  position: absolute; 
+  width: 100%; 
+  height: 2.0rem; 
+  line-height: 2.0rem; 
+  bottom: -2.0rem; 
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+}
+.vux-spinner{
+  vertical-align: -9px !important;
+  transform: scale(0.8);
+}
+/*覆盖/扩展vux,weui样式*/
+.vux-search-fixed{
+  z-index: 1000 !important;
+}
+.vux-search-fixed{
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+}
+.vux-search-fixed .vux-search_show{
+  flex:1;
+}
+.weui_cells.vux-search_show{
+  -webkit-overflow-scrolling: touch;
+}
+.vux-slider{
+  background-color: #fff;
+}
+.weui_toast_content{
+  font-size: 14px;
+  padding: 0 15px;
+}
+.weui_icon_toast{
+  margin-bottom: 10px !important;
+}
+.vux-tab .vux-tab-item{
+  font-weight: 500;
+}
+.weui_cell_ft  .weui_icon{
+  margin-left: 5px
+}
+.weui-vcode-btn {
+  width: 110px;
+  background-color: transparent;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  outline: 0;
+  display: inline-block;
+  height: 44px;
+  margin-left: 5px;
+  padding: 0 0.6em 0 0.7em;
+  border-left: 1px solid #E5E5E5;
+  line-height: 44px;
+  vertical-align: middle;
+  font-size: 17px;
+  color: #3CC51F;
+}
+.weui-vcode-btn:active {
+  color: #52a341;
+}
+.weui-vcode-btn:disabled{
+  color: #999;
+  text-shadow: 1px 1px #eee;
+}
+.vux-indicator a:only-child{
+  display: none;
+}
+hr.vux-1px-b {
+  height: 1px;
+  margin: 0.266667rem 0;
+}
+.vux-divider {
+  font-size: 12px;
+}
+.weui_media_box.weui_media_appmsg .weui_media_appmsg_thumb{
+  height: 100%;
+}
+.l-group [slot=icon] {
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 4px;
+  margin: 0 0.5rem 0 0;
+}
+.l-group .weui_cells {
+  margin: 0.75rem 0;
+}
+.l-group .weui_cell {
+  /*line-height: 1;*/
+}
+.l-group .weui_cell_bd > p {
+  font-weight: 400;
+}
+.l-group .has-desc {
+  line-height: 1;
+}
+.l-group .has-desc .vux-label-desc {
+  font-size: 12px;
+}
+.l-select-none{
+  user-select: none;
+}
+.vux-tab .vux-tab-item {
+  font-weight: 500;
+}
+.vux-header .vux-header-left .vux-header-back {
+  height: 0.533333rem;
+}
+
+/*
+  vue-router transition
+*/
+.vux-pop-out-transition,
+.vux-pop-in-transition {
+  width: 100%;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  backface-visibility: hidden;
+}
+.vux-pop-out-enter,
+.vux-pop-out-leave,
+.vux-pop-in-enter,
+.vux-pop-in-leave {
+  will-change: transform;
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+.vux-pop-out-enter {
+  animation-name: popInLeft;
+}
+.vux-pop-out-leave {
+  animation-name: popOutRight;
+}
+.vux-pop-in-enter {
+  perspective: 1000;
+  animation-name: popInRight;
+}
+.vux-pop-in-leave {
+  animation-name: popOutLeft;
+}
+@keyframes popInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes popOutLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes popInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes popOutRight {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(100%, 0, 0);
+  }
+}
