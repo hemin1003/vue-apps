@@ -1,5 +1,5 @@
 
-# 安装（建议先配置一个淘宝npm下载镜像地址：https://npm.taobao.org/）
+# 安装（建议先配置一个淘宝npm下载镜像地址：https://npm.taobao.org/
 npm install
 
 # 调试环境 serve with hot reload at http://localhost:8083
